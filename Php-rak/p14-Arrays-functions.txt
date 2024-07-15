@@ -1,0 +1,268 @@
+<?php
+
+Here are PHP arrays for the mentioned methods:
+
+    1. `array_change_key_case()`:
+
+    $array = ["Name" => "John", "Age" => 25];
+    $result = array_change_key_case($array, CASE_LOWER);
+
+
+    2. `array_chunk()`:
+
+    $array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    $chunks = array_chunk($array, 3);
+  
+
+    3. `array_column()`:
+
+    $students = [
+        ["name" => "John", "age" => 25],
+        ["name" => "Jane", "age" => 30],
+        ["name" => "Bob", "age" => 28]
+    ];
+    $names = array_column($students, "name");
+
+
+    4. `array_multisort()`:
+
+    $names = ["John", "Jane", "Bob"];
+    $ages = [25, 30, 28];
+    array_multisort($names, $ages);
+
+
+    5. `array_pad()`:
+
+    $array = [1, 2, 3];
+    $paddedArray = array_pad($array, 5, 0);
+
+
+    6. `array_pop()`:
+
+    $array = [1, 2, 3];
+    $lastElement = array_pop($array);
+
+
+    7. `array_combine()`:
+
+    $keys = ["name", "age", "city"];
+    $values = ["John", 25, "New York"];
+    $combinedArray = array_combine($keys, $values);
+
+
+    8. `array_diff()`:
+
+    $array1 = [1, 2, 3, 4, 5];
+    $array2 = [3, 4, 5, 6, 7];
+    $diff = array_diff($array1, $array2);
+
+
+    9. `array_diff_key()`:
+
+    $array1 = ["name" => "John", "age" => 25];
+    $array2 = ["age" => 25, "city" => "New York"];
+    $diff = array_diff_key($array1, $array2);
+
+
+    10. `array_diff_assoc()`:
+
+    $array1 = ["name" => "John", "age" => 25];
+    $array2 = ["name" => "Jane", "age" => 25];
+    $diff = array_diff_assoc($array1, $array2);
+
+
+    11. `array_count_values()`:
+
+    $array = [1, 2, 2, 3, 3, 3];
+    $count = array_count_values($array);
+
+
+    12. `array_fill()`:
+
+    $filledArray = array_fill(0, 5, "Hello");
+
+
+    13. `array_fill_keys()`:
+
+    $keys = ["name", "age", "city"];
+    $filledArray = array_fill_keys($keys, "Unknown");
+
+
+    14. `array_filter()`:
+
+    $array = [1, 2, 3, 4, 5];
+    $filteredArray = array_filter($array, function($value) {
+        return $value % 2 == 0;
+    });
+
+
+    15. `array_flip()`:
+
+    $array = ["name" => "John", "age" => 25];
+    $flippedArray = array_flip($array);
+
+
+    16. `array_intersect()`:
+
+    $array1 = [1, 2, 3, 4, 5];
+    $array2 = [3, 4, 5, 6, 7];
+    $intersect = array_intersect($array1, $array2);
+
+
+    17. `array_intersect_key()`:
+
+    $array1 = ["name" => "John", "age" => 25];
+    $array2 = ["age" => 25, "city" => "New York"];
+    $intersect = array_intersect_key($array1, $array2);
+
+
+    18. `array_intersect_assoc()`:
+
+    $array1 = ["name" => "John", "age" => 25];
+    $array2 = ["name" => "Jane", "age" => 25];
+    $intersect = array_intersect_assoc($array1, $array2);
+
+
+    19. `array_key_exists()`:
+
+    $array = ["name" => "John", "age" => 25];
+    $exists = array_key_exists("name", $array);
+
+
+    20. `array_keys()`:
+
+    $array = ["name" => "John", "age" => 25];
+    $keys = array_keys($array);
+
+
+    21. `array_map()`:
+
+    $array = [1, 2, 3, 4, 5];
+    $mappedArray = array_map(function($value) {
+        return $value * 2;
+    }, $array);
+
+
+    22. `array_merge()`:
+
+    $array1 = [1, 2, 3];
+    $array2 = [4, 5, 6];
+    $mergedArray = array_merge($array1, $array2);
+
+
+    23. `array_merge_recursive()`:
+
+    $array1 = ["name" => "John", "hobbies" => ["reading", "swimming"]];
+    $array2 = ["name" => "Jane", "hobbies" => ["painting"]];
+    $mergedArray = array_merge_recursive($array1, $array2);
+
+
+    24. `array_multisort()`:
+
+    $names = ["John", "Jane", "Bob"];
+    $ages = [25, 30, 28];
+    array_multisort($names, $ages);
+
+
+    25. `array_search()`:
+
+    $array = [1, 2, 3, 4, 5];
+    $key = array_search(3, $array);
+
+
+    26. `array_shift()`:
+
+    $array = [1, 2, 3];
+    $firstElement = array_shift($array);
+
+
+    27. `array_slice()`:
+
+    $array = [1, 2, 3, 4, 5];
+    $slicedArray = array_slice($array, 2, 3);
+
+
+    28. `array_splice()`:
+
+    $array = [1, 2, 3, 4, 5];
+    $removedElements = array_splice($array, 2, 2);
+
+
+    29. `array_product()`:
+
+    $array = [2, 4, 6, 8];
+    $product = array_product($array);
+
+
+    30. `array_push()`:
+
+    $array = [1, 2, 3];
+    array_push($array, 4, 5);
+
+
+    31. `array_pop()`:
+
+    $array = [1, 2, 3];
+    $lastElement = array_pop($array);
+
+
+    32. `array_rand()`:
+
+    $array = ["red", "green", "blue"];
+    $randomKey = array_rand($array);
+
+
+    33. `array_reduce()`:
+
+    $array = [1, 2, 3, 4, 5];
+    $sum = array_reduce($array, function($carry, $item) {
+        return $carry + $item;
+    });
+
+
+    34. `array_replace_recursive()`:
+
+    $array1 = ["name" => "John", "hobbies" => ["reading", "swimming"]];
+    $array2 = ["name" => "Jane", "hobbies" => ["painting"]];
+    $replacedArray = array_replace_recursive($array1, $array2);
+
+
+    35. `array_reverse()`:
+
+    $array = [1, 2, 3, 4, 5];
+    $reversedArray = array_reverse($array);
+
+
+    36. `array_flip()`:
+
+    $array = ["name" => "John", "age" => 25];
+    $flippedArray = array_flip($array);
+
+
+    37. `array_sum()`:
+
+    $array = [1, 2, 3, 4, 5];
+    $sum = array_sum($array);
+
+
+    38. `array_is_list()`:
+
+    $array1 = [1, 2, 3];
+    $isList1 = array_is_list($array1);
+
+    $array2 = ["name" => "John", "age" => 25];
+    $isList2 = array_is_list($array2);
+
+
+    39. `array_unshift()`:
+
+    $array = [1, 2, 3];
+    array_unshift($array, 0);
+
+
+    Please note that these arrays are just examples to demonstrate the usage of the respective PHP array functions. You can modify them according to your specific requirements.
+
+    Let me know if you need further assistance!
+
+
+?>
