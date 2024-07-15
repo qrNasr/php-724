@@ -16,7 +16,7 @@ echo "<br>";
 echo "<h1>div function.</h1>";
 function div($a, $b)
 {
-return "The division $a and $b is is " . ($a / $b);
+    return "The division $a and $b is is " . ($a / $b);
 }
 echo div(23, 13);
 echo "<br>";
@@ -29,7 +29,7 @@ echo "<br>";
 echo "<h1>mult function.</h1>";
 function mult($a, $b)
 {
-return "The multiplication $a and $b is " . ($a * $b);
+    return "The multiplication $a and $b is " . ($a * $b);
 }
 echo mult(23, 13);
 echo "<br>";
