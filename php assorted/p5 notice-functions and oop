@@ -1,0 +1,213 @@
+Certainly! Let's explore different types of functions in PHP, including simple functions, functions with parameters, functions with return values, variable functions, anonymous functions (closures), and recursive functions.
+
+### Simple Functions
+
+A simple function in PHP is defined using the `function` keyword.
+
+```php
+<?php
+function sayHello() {
+    echo "Hello, World!";
+}
+
+sayHello(); // Output: Hello, World!
+?>
+```
+
+### Functions with Parameters
+
+Functions can accept parameters, which are values passed to the function.
+
+```php
+<?php
+function greet($name) {
+    echo "Hello, $name!";
+}
+
+greet("Alice"); // Output: Hello, Alice!
+?>
+```
+
+### Functions with Default Parameters
+
+You can define default values for parameters.
+
+```php
+<?php
+function greet($name = "Guest") {
+    echo "Hello, $name!";
+}
+
+greet(); // Output: Hello, Guest!
+greet("Alice"); // Output: Hello, Alice!
+?>
+```
+
+### Functions with Return Values
+
+Functions can return values using the `return` keyword.
+
+```php
+<?php
+function add($a, $b) {
+    return $a + $b;
+}
+
+$result = add(3, 4);
+echo $result; // Output: 7
+?>
+```
+
+### Variable Functions
+
+PHP allows you to call a function using a variable containing the function's name.
+
+```php
+<?php
+function sayHello() {
+    echo "Hello, World!";
+}
+
+$functionName = "sayHello";
+$functionName(); // Output: Hello, World!
+?>
+```
+
+### Anonymous Functions (Closures)
+
+Anonymous functions, also known as closures, are functions without a specified name.
+
+```php
+<?php
+$greet = function($name) {
+    echo "Hello, $name!";
+};
+
+$greet("Alice"); // Output: Hello, Alice!
+?>
+```
+
+Anonymous functions can also use variables from the parent scope.
+
+```php
+<?php
+$message = "World";
+
+$greet = function() use ($message) {
+    echo "Hello, $message!";
+};
+
+$greet(); // Output: Hello, World!
+?>
+```
+
+### Recursive Functions
+
+A recursive function is a function that calls itself.
+
+```php
+<?php
+function factorial($n) {
+    if ($n == 0) {
+        return 1;
+    } else {
+        return $n * factorial($n - 1);
+    }
+}
+
+echo factorial(5); // Output: 120
+?>
+```
+
+### Type Declarations
+
+PHP 7 and later allows you to specify the types of parameters and return values.
+
+#### Scalar Type Declarations
+
+```php
+<?php
+function add(int $a, int $b): int {
+    return $a + $b;
+}
+
+echo add(3, 4); // Output: 7
+?>
+```
+
+#### Class and Interface Type Declarations
+
+```php
+<?php
+class User {
+    public $name;
+
+    public function __construct($name) {
+        $this->name = $name;
+    }
+}
+
+function greetUser(User $user) {
+    echo "Hello, " . $user->name . "!";
+}
+
+$user = new User("Alice");
+greetUser($user); // Output: Hello, Alice!
+?>
+```
+
+### Variadic Functions
+
+Variadic functions can accept a variable number of arguments.
+
+```php
+<?php
+function sum(...$numbers) {
+    return array_sum($numbers);
+}
+
+echo sum(1, 2, 3, 4); // Output: 10
+?>
+```
+
+### Example Combining Multiple Concepts
+
+Here's a more complex example that combines various concepts.
+
+```php
+<?php
+// Function with default parameters and return value
+function createGreeting($name = "Guest"): string {
+    return "Hello, $name!";
+}
+
+// Variadic function with type declarations
+function calculateAverage(int ...$numbers): float {
+    $total = array_sum($numbers);
+    return $total / count($numbers);
+}
+
+// Anonymous function with closure
+$prefix = "User";
+$addPrefix = function($name) use ($prefix) {
+    return "$prefix: $name";
+};
+
+// Recursive function
+function fibonacci($n) {
+    if ($n <= 1) {
+        return $n;
+    }
+    return fibonacci($n - 1) + fibonacci($n - 2);
+}
+
+// Call and display results
+echo createGreeting("Alice") . "<br>"; // Output: Hello, Alice!
+echo createGreeting() . "<br>"; // Output: Hello, Guest!
+echo calculateAverage(1, 2, 3, 4, 5) . "<br>"; // Output: 3
+echo $addPrefix("Alice") . "<br>"; // Output: User: Alice
+echo fibonacci(10) . "<br>"; // Output: 55
+?>
+```
+
+This example demonstrates a mix of default parameters, type declarations, variadic functions, closures, and recursion. This should give you a solid foundation in creating and using various types of functions in PHP. If you have any specific questions or need further clarification, feel free to ask!

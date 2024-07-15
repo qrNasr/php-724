@@ -1,0 +1,82 @@
+combines various OOP concepts we discussed:
+
+```php
+<?php
+interface Shape {
+    public function draw();
+}
+
+abstract class Vehicle {
+    protected $make;
+
+    public function __construct($make) {
+        $this->make = $make;
+    }
+
+    abstract public function startEngine();
+}
+
+trait Logger {
+    public function log($message) {
+        echo "Log: $message<br>";
+    }
+}
+
+class Car extends Vehicle implements Shape {
+    use Logger;
+
+    private $model;
+
+    public function __construct($make, $model) {
+        parent::__construct($make);
+        $this->model = $model;
+    }
+
+    public function startEngine() {
+        return "Car engine started";
+    }
+
+    public function draw() {
+        return "Drawing a car";
+    }
+}
+
+class Bike extends Vehicle implements Shape {
+    use Logger;
+
+    private $type;
+
+    public function __construct($make, $type) {
+        parent::__construct($make);
+        $this->type = $type;
+    }
+
+    public function startEngine() {
+        return "Bike engine started";
+    }
+
+    public function draw() {
+        return "Drawing a bike";
+    }
+}
+
+$car = new Car("Toyota", "Corolla");
+echo $car->startEngine(); // Output: Car engine started
+echo $car->log("Car action logged"); // Output: Log: Car action logged
+echo $car->draw(); // Output: Drawing a car
+
+$bike = new Bike("Honda", "Sports");
+echo $bike->startEngine(); // Output: Bike engine started
+echo $bike->log("Bike action logged"); // Output: Log: Bike action logged
+echo $bike->draw(); // Output: Drawing a bike
+?>
+```
+
+In this example, we have:
+
+- An interface `Shape` and abstract class `Vehicle` that define methods to be implemented by subclasses.
+- Classes `Car` and `Bike` that extend `Vehicle`, implement `Shape`, and use the `Logger` trait for logging.
+- A trait `Logger` for logging messages.
+- Usage of constructors, abstract methods, traits, and interfaces to demonstrate OOP principles in PHP.
+
+Feel free to ask if you have any further questions or need clarification on any of these topics!
