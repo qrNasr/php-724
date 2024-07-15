@@ -1,0 +1,51 @@
+$lt = 12.4;
+$typ = is_float($lt) ? 'float' : gettype($lt);
+echo "The data type of $lt is $typ <br>";
+
+$bl = true;
+$typ2 = is_bool($bl) ? 'bool' : gettype($bl);
+echo "The data type of $bl is $typ2 <br>";
+
+$str = "Hello, World!";
+$typ3 = is_string($str) ? 'string' : gettype($str);
+echo "The data type of $str is $typ3 <br>";
+
+$arr = [1, 2, 3];
+$typ4 = is_array($arr) ? 'array' : gettype($arr);
+echo "The data type of the array is $typ4 <br>";
+
+$obj = new stdClass();
+$typ5 = is_object($obj) ? 'object' : gettype($obj);
+echo "The data type of the object is $typ5 <br>";
+
+$null = null;
+$typ6 = is_null($null) ? 'null' : gettype($null);
+echo "The data type of $null is $typ6 <br>";
+
+$int = 42;
+$typ7 = is_int($int) ? 'int' : gettype($int);
+echo "The data type of $int is $typ7 <br>";
+
+$flt = 3.14;
+$typ8 = is_float($flt) ? 'float' : gettype($flt);
+echo "The data type of $flt is $typ8 <br>";
+
+$dir = __DIR__;
+$typ9 = is_dir($dir) ? 'directory' : gettype($dir);
+echo "The data type of $dir is $typ9 <br>";
+
+$file = __FILE__;
+$typ10 = is_file($file) ? 'file' : gettype($file);
+echo "The data type of $file is $typ10 <br>";
+
+$resource = fopen('example.txt', 'r');
+$typ11 = is_resource($resource) ? 'resource' : gettype($resource);
+echo "The data type of the resource is $typ11 <br>";
+
+$iterable = [1, 2, 3];
+$typ12 = is_iterable($iterable) ? 'iterable' : gettype($iterable);
+echo "The data type of the iterable is $typ12 <br>";
+
+$executable = is_executable(__FILE__);
+$typ13 = is_bool($executable) ? 'bool' : gettype($executable);
+echo "The data type of the executable is $typ13 <br>";
