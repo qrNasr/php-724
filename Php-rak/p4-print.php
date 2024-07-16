@@ -16,6 +16,4 @@ print "Country: " . $country . "<br>";
 print "City: " . $city . "<br>";
 print "Phone: " . $phone . "<br>";
 
-
-
 ?>
